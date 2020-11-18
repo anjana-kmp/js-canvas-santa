@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite animation</title>
+    <style>
+        .my-canvas{
+            border: 2px solid;
+            background: black;
+            margin: 50px;
+        }
+    </style>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <canvas class="my-canvas"></canvas>
+    <script>
+        var canvas = document.querySelector('.my-canvas')
+        var ctx = canvas.getContext('2d')
+        canvas.width = 934/2
+        canvas.height = 641/2
+        var imgArray = []
+        var counter = 0
+        $.get('./walk.json').then((response)=>{
+            var paths = response
+            paths.forEach((itm, idx, data)=>{
+                let image = new Image()
+                image.src = itm.path
+                imgArray.push(image)
+                image.onload = function(){
+                    counter++
+                    if(counter == data.length-1){
+                    startWalk()
+                    alert(123)
+                }
+
+                }
+              
+                
+            })
+        })
+        function startWalk(){
+
+        }
+
+    </script>
+</body>
+</html>
