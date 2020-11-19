@@ -20,19 +20,21 @@
         var ctx = canvas.getContext('2d')
         canvas.width = 934/2
         canvas.height = 641/2
-        var imgArray = []
+        var arrayObject = {
+            walk: []
+        }
         var counter = 0
         $.get('./walk.json').then((response)=>{
             var paths = response
             paths.forEach((itm, idx, data)=>{
                 let image = new Image()
                 image.src = itm.path
-                imgArray.push(image)
+                arrayObject.walk.push(image)
                 image.onload = function(){
                     counter++
                     if(counter == data.length-1){
                     startWalk()
-                    alert(123)
+                    
                 }
 
                 }
@@ -41,7 +43,8 @@
             })
         })
         function startWalk(){
-
+            let img  = arrayObject.walk[0]
+            ctx.drawImage(img,0,0,934/4,641/4)
         }
 
     </script>
