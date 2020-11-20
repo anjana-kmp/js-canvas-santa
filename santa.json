@@ -15,16 +15,16 @@
         {"path": "\\images\\Walk (13).png"}],
         
     "run":[
-    {"path":  "\\images\\Run (1).png"},
-    {"path":  "\\images\\Run (2).png"},
-    {"path":  "\\images\\Run (3).png"},
-    {"path":  "\\images\\Run (4).png"},
-    {"path":  "\\images\\Run (5).png"},
-    {"path":  "\\images\\Run (6).png"},
-    {"path":  "\\images\\Run (7).png"},
-    {"path":  "\\images\\Run (8).png"},
-    {"path":  "\\images\\Run (9).png"},
-    {"path":  "\\images\\Run (10).png"},
-    {"path":  "\\images\\Run (11).png"}]
+    {"path":  ".\\images\\Run (1).png"},
+    {"path":  ".\\images\\Run (2).png"},
+    {"path":  ".\\images\\Run (3).png"},
+    {"path":  ".\\images\\Run (4).png"},
+    {"path":  ".\\images\\Run (5).png"},
+    {"path":  ".\\images\\Run (6).png"},
+    {"path":  ".\\images\\Run (7).png"},
+    {"path":  ".\\images\\Run (8).png"},
+    {"path":  ".\\images\\Run (9).png"},
+    {"path":  ".\\images\\Run (10).png"},
+    {"path":  ".\\images\\Run (11).png"}]
 
 }
