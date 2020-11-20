@@ -105,11 +105,12 @@
         }
 
         function startRun() {
-            let animCounter = 0
+            let offsetY = 160
             let runCnclr = setInterval(() => {
                 console.log('running')
                 ctx.clearRect(0, 0, 934, 641)
-                animX += 15
+                animX += 30 
+                let animY = Math.sin(animCounter+7)*20+offsetY
                 ctx.drawImage(arrayObject.run[animCounter++], animX, 160, 934 / 4, 641 / 4)
                 if (animCounter >= arrayObject.run.length) {
                     animCounter = 0
