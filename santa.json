@@ -25,6 +25,25 @@
     {"path":  ".\\images\\Run (8).png"},
     {"path":  ".\\images\\Run (9).png"},
     {"path":  ".\\images\\Run (10).png"},
-    {"path":  ".\\images\\Run (11).png"}]
+    {"path":  ".\\images\\Run (11).png"}],
+
+    
+    "idle":[
+            {"path":".\\images\\Idle (1).png"},
+            {"path":".\\images\\Idle (2).png"},
+            {"path":".\\images\\Idle (3).png"},
+            {"path":".\\images\\Idle (4).png"},
+            {"path":".\\images\\Idle (5).png"},
+            {"path":".\\images\\Idle (6).png"},
+            {"path":".\\images\\Idle (7).png"},
+            {"path":".\\images\\Idle (8).png"},
+            {"path":".\\images\\Idle (9).png"},
+            {"path":".\\images\\Idle (10).png"},
+            {"path":".\\images\\Idle (11).png"},
+            {"path":".\\images\\Idle (12).png"},
+            {"path":".\\images\\Idle (13).png"},
+            {"path":".\\images\\Idle (14).png"},
+            {"path":".\\images\\Idle (15).png"},
+            {"path":".\\images\\Idle (16).png"}]
 
 }
