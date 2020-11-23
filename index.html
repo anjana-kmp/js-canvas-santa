@@ -29,6 +29,8 @@
     <button><b>Idle after walk</b></button>
     <button><b>Run</b></button>
     <button><b>Idle after run</b></button>
+    <button><b>Jump</b></button>
+
 
     <script>
         var canvas = document.querySelector('.my-canvas')
@@ -39,12 +41,14 @@
             walk: [],
             run: [],
             idle: [],
+            jump:[],
         }
         var counter = 0
         $.get('./santa.json').then((response) => {
             var walkPaths = response.walk;
             var runPaths = response.run;
             var idlePaths = response.idle;
+            var jumpPaths = response.jump;
 
             walkPaths.forEach((itm, idx, data) => {
                 let image = new Image()
@@ -62,7 +66,16 @@
                
 
             })
-            debugger
+
+            jumpPaths.forEach((itm, idx, data) => {
+                let image = new Image()
+                image.src = itm.path
+                arrayObject.jump.push(image)
+               
+
+            })
+
+            
             runPaths.forEach((itm, idx, data) => {
                 if(!idx){
                     counter = 0
@@ -93,6 +106,9 @@
                                     santaIdle(18)
                                     break
 
+                                    case 'Jump':
+                                    santaJump()
+                                    break
 
                                 
                             }
@@ -143,6 +159,9 @@
                 clearInterval(idleCnclr)
                 
             }
+            if(jumpCnclr){
+                clearInterval(jumpCnclr)
+            }
         }
         let runCnclr
         function startRun() {
@@ -182,7 +201,25 @@
 
             
         }
+        let jumpCnclr
+        function santaJump(){
+            reset()
+            let animX = 120
+            let offsetY = 130
+            jumpCnclr = setInterval(() => {
+                console.log('jumping')
+                ctx.clearRect(0, 0, 934, 641)
+                // animX += 5
+                let animY = Math.max(Math.sin(animCounter + 7)*8 +offsetY,0)
+                ctx.drawImage(arrayObject.jump[animCounter++], animX, animY, 934 / 4, 641 / 4)
+                if (animCounter >= arrayObject.jump.length) {
+                    animCounter = 0 
+                }
+               
+            }, 1000 / 8)
 
+
+        }
         
         
     </script>
